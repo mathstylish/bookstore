@@ -13,7 +13,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -27,7 +27,7 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
-    private Date date;
+    private Instant date;
 
     @ManyToOne
     @JoinColumn(name = "discount_id")
