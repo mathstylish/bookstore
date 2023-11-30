@@ -3,6 +3,7 @@ package br.com.bookstore.domain.order;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -21,6 +22,7 @@ import java.util.Date;
 @Table(name = "orders")
 public class Order {
     @Id
+    @GeneratedValue
     private Integer id;
     @ManyToOne
     @JoinColumn(name = "customer_id")
