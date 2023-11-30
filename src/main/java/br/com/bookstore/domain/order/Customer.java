@@ -42,7 +42,7 @@ public class Customer {
 
     @ManyToMany
     @JoinTable(
-            name = "customer_discounts",
+            name = "customers_discounts",
             joinColumns = @JoinColumn(name = "customer_id"),
             inverseJoinColumns = @JoinColumn(name = "discount_id")
     )
